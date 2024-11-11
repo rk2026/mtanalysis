@@ -9,6 +9,12 @@ Original file is located at
 install library if not
 """
 
+#!./google_colab-1.0.0.tar.gz
+
+#!./google_colab-1.0.0.tar.gz
+
+#!pip install -r requirements.txt
+
 #!pip install GDAL
 
 #!pip install fiona
@@ -17,20 +23,20 @@ install library if not
 
 #!pip install folium
 
-!pip install streamlit
+#!pip install streamlit
 
-!pip install matplotlib-scalebar
+#!pip install matplotlib-scalebar
 
-!pip install contextily
+#!pip install contextily
 
 """Import necessary library"""
 
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-from matplotlib_scalebar.scalebar import ScaleBar  # If not installed, install with `pip install matplotlib-scalebar`
+#from matplotlib_scalebar.scalebar import ScaleBar  # If not installed, install with `pip install matplotlib-scalebar`
 import matplotlib.lines as mlines
 #import numpy as np
-import contextily as ctx
+#import contextily as ctx
 import zipfile
 import math
 import pandas as pd
@@ -129,8 +135,8 @@ if uploaded_file is not None:
 else:
     st.write("Please upload a CSV file.")
 
-#stemmapping = files.upload()
-#df = pd.read_csv('TreeLoc.csv')
+stemmapping = files.upload()
+df = pd.read_csv('TreeLoc.csv')
 
 joined_df = df.merge(sppVal, left_on='species', right_on='scientific_name')
 
@@ -405,8 +411,8 @@ if projected_crs:
 #the following code uses geopandas library but it needs to be downloaded using streamlit library. correct the code accordingly.
 """
 
-result_gdf.to_csv('result_gdf.csv', index=False)
-files.download('result_gdf.csv')
+#result_gdf.to_csv('result_gdf.csv', index=False)
+#files.download('result_gdf.csv')
 
 """using streamlit library download result_gdf"""
 
