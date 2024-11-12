@@ -9,6 +9,8 @@ Original file is located at
 install library if not
 """
 
+pip install --upgrade pip
+
 !pip install streamlit
 
 """Import necessary library"""
