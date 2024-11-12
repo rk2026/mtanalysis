@@ -9,6 +9,19 @@ Original file is located at
 install library if not
 """
 
+!pip install cudf-cu12
+
+!apt-get install -qq libgdal-dev
+!pip install gdal
+
+!pip cache purge
+
+!apt-get install libgdal-dev
+
+!nvcc --version
+
+!gdal-config --version
+
 pip install --upgrade pip
 
 !pip install streamlit
@@ -27,7 +40,7 @@ import pyproj
 from shapely.geometry import Polygon
 from shapely.geometry import Point
 from shapely.geometry import box
-#from google.colab import files
+from google.colab import files
 
 """To get all library version."""
 
@@ -39,7 +52,7 @@ session_info.show()
 
 session_info.show(write_req_file=True, req_file_name='requirements.txt')'''
 
-#!pip freeze > requirements.txt
+!pip freeze > requirements.txt
 
 """Hardcoded constant value."""
 
@@ -353,5 +366,3 @@ def download_gdf_zip(gdf, filename):
 # Example usage within your Streamlit app
 if st.button('Download Shapefile'):
     download_gdf_zip(result_gdf, "result_gdf")
-
-result_gdf
