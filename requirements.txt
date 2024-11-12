@@ -1,4 +1,3 @@
-upgrade pip
 matplotlib.pyplot as plt
 matplotlib.patches as mpatches
 matplotlib.lines as mlines
